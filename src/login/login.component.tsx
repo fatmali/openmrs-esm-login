@@ -49,13 +49,19 @@ export default function Login(props: LoginProps) {
       className="canvas"
       css={css`
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100vw;
         height: 100vh;
       `}
     >
-      <div className="omrs-card omrs-padding-16">
+      <div
+        className="omrs-card omrs-padding-16"
+        css={css`
+          width: 27rem;
+        `}
+      >
         <div
           css={css`
             text-align: center;
@@ -148,6 +154,27 @@ export default function Login(props: LoginProps) {
             </button>
           </div>
         </form>
+      </div>
+      <div className="omrs-margin-top-32">
+        <p
+          css={css`
+            text-align: center;
+            color: var(--omrs-color-ink-low-contrast);
+          `}
+        >
+          Powered by
+        </p>
+        <div>
+          <svg
+            role="img"
+            css={css`
+              height: 2.5625rem;
+              width: 8.5rem;
+            `}
+          >
+            <use xlinkHref="#omrs-logo-partial-mono"></use>
+          </svg>
+        </div>
       </div>
     </div>
   );
