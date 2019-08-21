@@ -52,30 +52,25 @@ export default function Login(props: LoginProps) {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100vw;
         height: 100vh;
       `}
     >
-      <div
-        className="omrs-card omrs-padding-16"
-        css={css`
-          width: 27rem;
-        `}
-      >
+      <div className="omrs-card">
         <div
           css={css`
             text-align: center;
           `}
         >
-          <svg role="img">
+          <svg
+            role="img"
+            css={css`
+              margin-bottom: 3rem;
+            `}
+          >
             <use xlinkHref="#omrs-logo-full-color"></use>
           </svg>
         </div>
-        <form
-          onSubmit={handleSubmit}
-          className="omrs-margin-top-32"
-          ref={formRef}
-        >
+        <form onSubmit={handleSubmit} ref={formRef}>
           <div className="omrs-input-group">
             <input
               id="username"
