@@ -21,8 +21,6 @@ deploy:
   local_dir: dist
   skip_cleanup: true
   acl: public_read
-  on:
-    branch: master
 after_deploy:
   - echo "Updating import map to point to new version of @openmrs/esm-login"
   - http --json  PATCH $DEPLOYER_HOST/services\?env\=prod \
