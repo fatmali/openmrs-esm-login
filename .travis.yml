@@ -9,6 +9,9 @@ script:
   - echo "Folder name in Digital Ocean Spaces - $TRAVIS_COMMIT"
   - mkdir -p dist/@openmrs/esm-login/$TRAVIS_COMMIT
   - mv dist/*.* dist/@openmrs/esm-login/$TRAVIS_COMMIT/
+  - npm install codecov -g
+after_success:
+  - codecov
 deploy:
   provider: s3
   access_key_id: "$DIGITAL_OCEAN_SPACES_KEY_ID"

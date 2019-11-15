@@ -104,6 +104,7 @@ export default function Login(props: LoginProps) {
               value={username}
               onChange={evt => setUsername(evt.target.value)}
               ref={usernameInputRef}
+              autoComplete="username"
               autoFocus
               required
             />
@@ -123,6 +124,7 @@ export default function Login(props: LoginProps) {
               value={password}
               onChange={evt => setPassword(evt.target.value)}
               ref={passwordInputRef}
+              autoComplete="current-password"
               required
             />
             <label htmlFor="password">
